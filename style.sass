@@ -9,7 +9,7 @@ $padding: 30vmin
 html, body
     margin: 0
     font-family: 'Roboto Slab', serif
-    height: 200%
+    height: 225%
     background-color: $pl4
 
 .wp1, .wp2
@@ -214,6 +214,7 @@ html, body
         font-weight: bold
         font-size: 3vmin
 
+        cursor: default
         border: 0.5vmin solid black
         margin-top: 2vmin
         margin-right: 5vmin
@@ -223,14 +224,17 @@ html, body
 
         .gameTitle
             font-size: 3vmin
-            margin-left: 3vmin
-            margin-top: 1vmin
+            border-bottom: 0.5vmin solid $pl5
+            padding-left: 3vmin
+            padding-bottom: 1vmin
+
+            margin-top: 0.5vmin
         .gameBio
             font-size: 2vmin
 
             margin-left: 3vmin
             margin-right: 3vmin
-            margin-top: 0.5vmin
+            margin-top: 1vmin
             margin-bottom: 1vmin
         .gamePlay
             width: 20vmin
@@ -239,16 +243,25 @@ html, body
             margin: 2vmin
             margin-left: 3vmin
 
+            text-decoration: none
+
             background-color: yellow
             display: block
             text-align: center
 
-            cursor: pointer
             box-shadow: 0px 0.5vmin 0 0px #b9b900
             span
                 position: relative
                 top: 10%
 
+        .gamePlay:hover
+            animation-name: webHover
+            animation-duration: 0.15s
+            -webkit-animation-fill-mode: forwards
+        .gamePlay:not(:hover)
+            animation-name: webHoverOut
+            animation-duration: 0.15s
+            -webkit-animation-fill-mode: forwards
         .gamePlay:active
             box-shadow: none
             transform: translateY(0.5vmin)
