@@ -67,13 +67,15 @@ html
             .title Websites
             .subTitle My Work
             .previews
-                a.sitePreview(href="http://m1ksu.ml/" target="_blank")
+                a.sitePreview(href="http://m1ksu.ml/"
+                    target="_blank")
                     #m1ksu
                         img(src="img/m1ksu.png"
                             alt="image could not be loaded")
                         .siteTitle
                             i m1ksu.ml v2
-                a.sitePreview(href="http://paulc.tk/" target="_blank")
+                a.sitePreview(href="http://paulc.tk/"
+                    target="_blank")
                     #paulc
                         img(src="img/paulc.png"
                             alt="image could not be loaded")
@@ -106,10 +108,56 @@ html
             .title My Games
             
             .previews
-                a.gamePreview
-                    img(src="img/globbygoo.png")
+                .gamePreview
+                    a(href="https://goo.gl/5n2LsL"
+                        target="_blank") 
+                        img(src="img/globbygoo.png")
                     .gameTitle The Adventures of Globby Goo
-                    .gameBio You are a ball of... something, 
+                    .gameBio In this 2D platformer you are a ball 
+                        span of... something, 
                         span and you need to get to the finish line.
-                    .gamePlay 
+                    a(class="gamePlay" href="https://goo.gl/5n2LsL"
+                        target="_blank")   
+                        span Play!
+                
+                .gamePreview
+                    a(href="https://goo.gl/5n2LsL"
+                        target="_blank")
+                        img(src="img/pewpop.png")
+                    .gameTitle 3h Pew Pop
+                    .gameBio A quick 2D platformer game where 
+                        span you gotta shoot the balloons, and do   
+                        span it fast. I made this in about 3 hours 
+                        span in very late 2016.
+                    a(class="gamePlay" 
+                        href="https://goo.gl/1JLMoj"
+                        target="_blank")   
+                        span Play!
+            
+                .gamePreview
+                    a(href="https://goo.gl/w3Xobh"
+                        target="_blank")
+                        img(src="img/pewpop.png")
+                    .gameTitle 3h Pew Pop
+                    .gameBio A quick 2D platformer game where 
+                        span you gotta shoot the balloons, and do   
+                        span it fast. I made this in about 3 hours 
+                        span in very late 2016.
+                    a(class="gamePlay" 
+                        href="https://goo.gl/1JLMoj"
+                        target="_blank")   
+                        span Play!
+                
+                .gamePreview
+                    a(href="https://goo.gl/w3Xobh"
+                        target="_blank")
+                        img(src="img/enemyhor.png")
+                    .gameTitle Enemy Horizons: Assault
+                    .gameBio An unfinished top-down shooter,
+                        span where you can see the nice effects
+                        span and use the silencer or not and...
+                        span yeah the effects are nice.
+                    a(class="gamePlay" 
+                        href="https://goo.gl/L3DSjr"
+                        target="_blank")   
                         span Play!
