@@ -1,0 +1,258 @@
+$pl1: #212121
+$pl2: #5F5E5E
+$pl3: #8D8D8D
+$pl4: #B9B9B9
+$pl5: #EBEAEA
+$paddingtitle: 25vmin
+$padding: 30vmin
+
+html, body
+    margin: 0
+    font-family: 'Roboto Slab', serif
+    height: 200%
+    background-color: $pl4
+
+.wp1, .wp2
+    position: relative
+
+.wp1
+    top: -8%
+.wp2
+    top: -6%
+
+.nav
+    position: fixed
+    width: 100%
+    height: 7.5vmin
+    background-color: $pl1
+    color: white
+    font-size: 3vmin
+    z-index: 1
+    text-align: center
+
+    .navTable
+        opacity: 0.1
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+
+        margin-left: auto
+        margin-right: auto
+
+        width: 90vmin
+        height: 7.5vmin
+        border-spacing: 0
+        th
+            padding: 0
+            text-align: center
+            width: 1vmin
+        th:hover
+            cursor: pointer
+            animation-name: navHover
+            animation-duration: 0.1s
+            -webkit-animation-fill-mode: forwards
+        th:not(:hover)
+            animation-name: navHoverOut
+            animation-duration: 0.2s
+            -webkit-animation-fill-mode: forwards
+
+        @keyframes navHover
+            from
+                opacity: 1
+            to
+                opacity: 0.4
+        @keyframes navHoverOut
+            from
+                opacity: 0.4
+            to
+                opacity: 1
+
+.header
+    width: 100%
+    height: 85vmin
+    background-color: $pl1
+    color: white
+    font-size: 4vmin
+
+    .title
+        padding-left: $paddingtitle
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+
+        #headerName
+            font-size: 15vmin
+            font-weight: bold
+        #headerWork
+            font-weight: lighter
+            font-size: 4.5vmin
+            br
+                line-height: 0.2vmin
+
+.title
+    padding-top: 10vmin
+    padding-left: $padding
+    font-size: 10vmin
+    font-weight: bold
+.about
+    width: 100%
+    height: 100vmin
+    background-color: $pl5
+    color: $pl1
+    .title
+        padding-top: 10vmin
+        padding-left: $padding
+        font-size: 12.5vmin
+        font-weight: bold
+
+    .bio
+        font-size: 3.5vmin
+        padding-left: $padding
+
+    .contact
+        margin-top: 10vmin
+        margin-left: $padding
+        margin-right: 95vmin
+
+        line-height: 5vmin
+
+        width: 80vmin
+        font-size: 6vmin
+        font-weight: bold
+
+        outline: 0.5vmin solid $pl2
+        outline-offset: 0.75vmin
+
+        padding: 3vmin
+        padding-top: 2vmin
+
+        background-color: white
+        border: 0.5vmin solid $pl4
+        div
+            font-weight: normal
+            font-size: 3.5vmin
+            padding-left: 3vmin
+        span
+            font-weight: normal
+
+        .email, .skype, .steam
+            font-weight: bold
+        .email
+            margin-top: 4%
+.websites
+    width: 100%
+    height: 120vmin
+    background-color: $pl1
+    color: $pl5
+    .subTitle
+        margin-top: 2vmin
+        padding-left: $padding
+        font-size: 5vmin
+        margin-bottom: 1vmin
+
+    .previews
+        margin-left: $padding
+
+    .sitePreview
+        text-decoration: none
+        color: white
+        border: 0.5vmin solid $pl2
+        margin-top: 2vmin
+        width: 50vmin
+        font-weight: bold
+        font-size: 3vmin
+        display: inline-block
+        margin-right: 5vmin
+
+        #m1ksu
+            background-color: black
+        #paulc, #random
+            color: black
+            background-color: white
+        #teamgf
+            background-color: #0C0E19
+        img
+            width: 50vmin
+
+        .siteTitle
+            margin-left: 4vmin
+            padding-bottom: 1vmin
+
+    .sitePreview:hover
+        cursor: pointer
+        animation-name: webHover
+        animation-duration: 0.1s
+        -webkit-animation-fill-mode: forwards
+    .sitePreview:not(:hover)
+        animation-name: webHoverOut
+        animation-duration: 0.1s
+        -webkit-animation-fill-mode: forwards
+
+    @keyframes webHover
+        from
+            filter: brightness(100%)
+        to
+            filter: brightness(60%)
+    @keyframes webHoverOut
+        from
+            filter: brightness(60%)
+        to
+            filter: brightness(100%)
+.games
+    width: 100%
+    height: 100vmin
+    background-color: $pl5
+    color: $pl1
+
+    .previews
+        margin-left: $padding
+
+    .gamePreview
+        text-decoration: none
+        color: $pl5
+        background-color: $pl1
+        font-weight: bold
+        font-size: 3vmin
+
+        border: 0.5vmin solid black
+        margin-top: 2vmin
+        margin-right: 5vmin
+
+        width: 50vmin
+        display: inline-block
+
+        .gameTitle
+            font-size: 3vmin
+            margin-left: 3vmin
+            margin-top: 1vmin
+        .gameBio
+            font-size: 2vmin
+
+            margin-left: 3vmin
+            margin-right: 3vmin
+            margin-top: 0.5vmin
+            margin-bottom: 1vmin
+        .gamePlay
+            width: 20vmin
+            height: 5vmin
+            color: $pl1
+            margin: 2vmin
+            margin-left: 3vmin
+
+            background-color: yellow
+            display: block
+            text-align: center
+
+            cursor: pointer
+            box-shadow: 0px 0.5vmin 0 0px #b9b900
+            span
+                position: relative
+                top: 10%
+
+        .gamePlay:active
+            box-shadow: none
+            transform: translateY(0.5vmin)
+
+        img
+            width: 50vmin
+            border-bottom: 0.5vmin solid black

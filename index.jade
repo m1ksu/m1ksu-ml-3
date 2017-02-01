@@ -1,0 +1,115 @@
+//- out: .
+doctype html
+html
+    head
+        title m1ksu
+
+        meta(charset="windows-1252")
+        script(src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" 
+            crossorigin="anonymous")
+        script(src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Roboto+Slab:300"
+              rel="stylesheet")
+        
+        script(src="script.js" type="text/javascript")
+        link(href="style.min.css" rel="stylesheet")
+        
+
+    body
+        .nav
+            table.navTable
+                th#w1 about
+                th#w2 websites
+                th#w3 games
+                th#w4 wallpapers
+                th#w5 music
+
+        .header
+            .title
+                div#headerName(style="font-weight: bold") m1ksu
+                div#headerWork
+                    div games, maps, music, wallpapers
+                    div and websites
+        
+        .about
+            .wp1
+            .title About
+            p.bio
+                span Hi, I'm 
+                b Mikael Stenman, 
+                span also known as 
+                b m1ksu 
+                span on the internet.
+                br
+                span I'm a (young) Finnish male, who has started 
+                span making websites.
+                br
+                span I like to play games, make them, 
+                span and to make websites.
+                br
+                span You can ask me to make you a website 
+                span for free or for a small fee.
+                br
+                span I don't mind.
+            .contact Contact Me!
+                .email Email: 
+                    span mikael.stenman112@gmail.com
+                .skype Skype: 
+                    span mikael.stenman112@gmail.com
+                .steam Steam ID: 
+                    span m1ksu4u
+        
+        .websites
+            .wp2 wp2
+            .title Websites
+            .subTitle My Work
+            .previews
+                a.sitePreview(href="http://m1ksu.ml/" target="_blank")
+                    #m1ksu
+                        img(src="img/m1ksu.png"
+                            alt="image could not be loaded")
+                        .siteTitle
+                            i m1ksu.ml v2
+                a.sitePreview(href="http://paulc.tk/" target="_blank")
+                    #paulc
+                        img(src="img/paulc.png"
+                            alt="image could not be loaded")
+                        .siteTitle
+                            i paulc.tk
+                br
+                a.sitePreview(
+                    href="http://randomfactapp.000webhostapp.com/" 
+                    target="_blank")
+                    
+                    #random
+                        img(src="img/random.png" 
+                            alt="image could not be loaded")
+                        .siteTitle
+                            i Useless Fact Generator
+                
+                a.sitePreview(
+                    href="http://teamgf.000webhostapp.com/" 
+                    target="_blank")
+                    
+                    #teamgf
+                        img(src="img/teamgf.png" 
+                            alt="image could not be loaded")
+                        .siteTitle
+                            i teamGF Homesite
+        
+        .games
+            .wp3
+            
+            .title My Games
+            
+            .previews
+                a.gamePreview
+                    img(src="img/globbygoo.png")
+                    .gameTitle The Adventures of Globby Goo
+                    .gameBio You are a ball of... something, 
+                        span and you need to get to the finish line.
+                    .gamePlay 
+                        span Play!
