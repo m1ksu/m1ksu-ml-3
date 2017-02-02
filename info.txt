@@ -1,0 +1,7 @@
+Name: meme quotes
+
+Description: A random template inspired by a pic of a site.
+I could use it for some future project.
+
+Started: N/A
+Published: ~ 9.1.2017
