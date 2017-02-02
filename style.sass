@@ -5,6 +5,7 @@ $pl4: #B9B9B9
 $pl5: #EBEAEA
 $paddingtitle: 25vmin
 $padding: 30vmin
+$secshadow: inset 0px 10px 20px 0 black, inset 0 -10px 20px 0px black
 
 html, body
     margin: 0
@@ -29,6 +30,7 @@ html, body
     font-size: 3vmin
     z-index: 1
     text-align: center
+    box-shadow: 0 -10px 20px 15px black
 
     .navTable
         opacity: 0.1
@@ -73,9 +75,10 @@ html, body
     background-color: $pl1
     color: white
     font-size: 4vmin
+    box-shadow: inset 0 -10px 20px 0px black
 
     .title
-        padding-left: $paddingtitle
+        margin-left: $paddingtitle
         position: relative
         top: 50%
         transform: translateY(-50%)
@@ -91,7 +94,7 @@ html, body
 
 .title
     padding-top: 10vmin
-    padding-left: $padding
+    margin-left: $padding
     font-size: 10vmin
     font-weight: bold
 .about
@@ -101,13 +104,13 @@ html, body
     color: $pl1
     .title
         padding-top: 10vmin
-        padding-left: $padding
+        margin-left: $padding
         font-size: 12.5vmin
         font-weight: bold
 
     .bio
         font-size: 3.5vmin
-        padding-left: $padding
+        margin-left: $padding
 
     .contact
         margin-top: 10vmin
@@ -120,14 +123,12 @@ html, body
         font-size: 6vmin
         font-weight: bold
 
-        outline: 0.5vmin solid $pl2
-        outline-offset: 0.75vmin
-
         padding: 3vmin
         padding-top: 2vmin
 
         background-color: white
-        border: 0.5vmin solid $pl4
+        border: 0.5vmin solid $pl2
+        box-shadow: 10px 10px 15px 0px grey
         div
             font-weight: normal
             font-size: 3.5vmin
@@ -144,9 +145,10 @@ html, body
     height: 120vmin
     background-color: $pl1
     color: $pl5
+    box-shadow: $secshadow
     .subTitle
         margin-top: 2vmin
-        padding-left: $padding
+        margin-left: $padding
         font-size: 5vmin
         margin-bottom: 1vmin
 
@@ -181,11 +183,11 @@ html, body
     .sitePreview:hover
         cursor: pointer
         animation-name: webHover
-        animation-duration: 0.1s
+        animation-duration: 0.15s
         -webkit-animation-fill-mode: forwards
     .sitePreview:not(:hover)
         animation-name: webHoverOut
-        animation-duration: 0.1s
+        animation-duration: 0.15s
         -webkit-animation-fill-mode: forwards
 
     @keyframes webHover
@@ -198,9 +200,10 @@ html, body
             filter: brightness(60%)
         to
             filter: brightness(100%)
+
 .games
     width: 100%
-    height: 100vmin
+    height: 145vmin
     background-color: $pl5
     color: $pl1
 
@@ -256,11 +259,11 @@ html, body
 
         .gamePlay:hover
             animation-name: webHover
-            animation-duration: 0.15s
+            animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
         .gamePlay:not(:hover)
             animation-name: webHoverOut
-            animation-duration: 0.15s
+            animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
         .gamePlay:active
             box-shadow: none
@@ -269,3 +272,13 @@ html, body
         img
             width: 50vmin
             border-bottom: 0.5vmin solid black
+
+        img:hover
+            cursor: pointer
+            animation-name: webHover
+            animation-duration: 0.1s
+            -webkit-animation-fill-mode: forwards
+        img:not(:hover)
+            animation-name: webHoverOut
+            animation-duration: 0.1s
+            -webkit-animation-fill-mode: forwards
