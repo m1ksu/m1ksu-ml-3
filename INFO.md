@@ -1,7 +1,6 @@
 #m1ksu.ml v3
 
-####A random template inspired by a pic of a site.
-####I could use it for some future project.
+####The third iteration of my home site, insipired by an image I saw online.
 
 ######Started: 26.1.2017
 ######Published:
