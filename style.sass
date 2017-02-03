@@ -13,13 +13,17 @@ html, body
     height: 225%
     background-color: $pl4
 
-.wp1, .wp2
+.wp1, .wp2, .wp3, .wp4
     position: relative
 
 .wp1
     top: -8%
 .wp2
     top: -6%
+.wp3
+    top: -5%
+.wp4
+    top: -7%
 
 .nav
     position: fixed
@@ -128,7 +132,7 @@ html, body
 
         background-color: white
         border: 0.5vmin solid $pl2
-        box-shadow: 10px 10px 15px 0px grey
+        box-shadow: 10px 10px 7px 0px grey
         div
             font-weight: normal
             font-size: 3.5vmin
@@ -282,3 +286,16 @@ html, body
             animation-name: webHoverOut
             animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
+
+.wallpapers
+    width: 100%
+    height: 100vmin
+    background-color: $pl1
+    color: $pl5
+    box-shadow: $secshadow
+    .portfolio
+        margin-left: 30vmin
+        .wall
+            width: 40vmin
+            img
+                width: 40vmin

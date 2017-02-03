@@ -18,6 +18,12 @@ $(function() {
         }, {duration: 600, easing: 'easeInOutSine'});
     });
 
+    $(document).on('click','#w4', function(){
+        $('html, body').animate({
+            scrollTop: $(".wp4").offset().top,
+        }, {duration: 600, easing: 'easeInOutSine'});
+    });
+
 
     $(document).on('click', 'body', function(){
         $('navTable').animate({opacity: 1});
