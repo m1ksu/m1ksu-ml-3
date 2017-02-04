@@ -5,7 +5,9 @@ $pl4: #B9B9B9
 $pl5: #EBEAEA
 $paddingtitle: 25vmin
 $padding: 30vmin
-$secshadow: inset 0px 10px 20px 0 black, inset 0 -10px 20px 0px black
+$secshadow: inset 0px 1vmin 2vmin 0 black, inset 0 -1vmin 2vmin 0 black
+$previewshadow: 0.7vmin 0.7vmin 0.5vmin 0 rgba(0, 0, 0, 0.5)
+$gameshadow: 0px 0.5vmin 0 0px #b9b900, 0.2vmin 0.5vmin 0.5vmin 0.3vmin black
 
 html, body
     margin: 0
@@ -23,7 +25,7 @@ html, body
 .wp3
     top: -5%
 .wp4
-    top: -7%
+    top: -5%
 
 .nav
     position: fixed
@@ -67,17 +69,20 @@ html, body
                 opacity: 1
             to
                 opacity: 0.4
+                transform: scale(1.15, 1.15)
         @keyframes navHoverOut
             from
                 opacity: 0.4
+                transform: scale(1.15, 1.15)
             to
                 opacity: 1
+                transform: scale(1, 1) translate(0, 0)
 
 .header
     width: 100%
     height: 85vmin
     background-color: $pl1
-    color: white
+    color: $pl5
     font-size: 4vmin
     box-shadow: inset 0 -10px 20px 0px black
 
@@ -90,6 +95,8 @@ html, body
         #headerName
             font-size: 15vmin
             font-weight: bold
+            text-decoration: none
+            color: $pl5
         #headerWork
             font-weight: lighter
             font-size: 4.5vmin
@@ -169,7 +176,7 @@ html, body
         font-size: 3vmin
         display: inline-block
         margin-right: 5vmin
-
+        box-shadow: $previewshadow
         #m1ksu
             background-color: black
         #paulc, #random
@@ -186,24 +193,13 @@ html, body
 
     .sitePreview:hover
         cursor: pointer
-        animation-name: webHover
+        animation-name: previewHover
         animation-duration: 0.15s
         -webkit-animation-fill-mode: forwards
     .sitePreview:not(:hover)
-        animation-name: webHoverOut
+        animation-name: previewHoverOut
         animation-duration: 0.15s
         -webkit-animation-fill-mode: forwards
-
-    @keyframes webHover
-        from
-            filter: brightness(100%)
-        to
-            filter: brightness(60%)
-    @keyframes webHoverOut
-        from
-            filter: brightness(60%)
-        to
-            filter: brightness(100%)
 
 .games
     width: 100%
@@ -220,6 +216,7 @@ html, body
         background-color: $pl1
         font-weight: bold
         font-size: 3vmin
+        box-shadow: $previewshadow
 
         cursor: default
         border: 0.5vmin solid black
@@ -256,22 +253,33 @@ html, body
             display: block
             text-align: center
 
-            box-shadow: 0px 0.5vmin 0 0px #b9b900
+            box-shadow: $gameshadow
             span
                 position: relative
                 top: 10%
 
         .gamePlay:hover
-            animation-name: webHover
+            animation-name: gameHover
             animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
         .gamePlay:not(:hover)
-            animation-name: webHoverOut
+            animation-name: gameHoverOut
             animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
         .gamePlay:active
             box-shadow: none
             transform: translateY(0.5vmin)
+
+        @keyframes gameHover
+            from
+                filter: brightness(100%)
+            to
+                filter: brightness(60%)
+        @keyframes gameHoverOut
+            from
+                filter: brightness(60%)
+            to
+                filter: brightness(100%)
 
         img
             width: 50vmin
@@ -279,11 +287,11 @@ html, body
 
         img:hover
             cursor: pointer
-            animation-name: webHover
+            animation-name: gameHover
             animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
         img:not(:hover)
-            animation-name: webHoverOut
+            animation-name: gameHoverOut
             animation-duration: 0.1s
             -webkit-animation-fill-mode: forwards
 
@@ -305,3 +313,30 @@ html, body
             img
                 width: 30vmin
                 border: 0.5vmin solid white
+                margin: 1vmin
+                box-shadow: 5px 5px 5px 0 black
+            img:hover
+                animation-name: previewHover
+                animation-duration: 0.1s
+                -webkit-animation-fill-mode: forwards
+            img:not(:hover)
+                animation-name: previewHoverOut
+                animation-duration: 0.1s
+                -webkit-animation-fill-mode: forwards
+
+@keyframes previewHover
+    from
+        box-shadow: $previewshadow
+    to
+        filter: brightness(60%)
+        box-shadow: 0.7vmin 0.7vmin 1.5vmin 0.2vmin rgba(0, 0, 0, 0.75)
+        transform: scale(1.075, 1.075)
+@keyframes previewHoverOut
+    from
+        filter: brightness(60%)
+        transform: scale(1.075, 1.075)
+        box-shadow: 0.7vmin 0.7vmin 1.5vmin 0.2vmin rgba(0, 0, 0, 0.75)
+    to
+        filter: brightness(100%)
+        transform: scale(1, 1)
+        box-shadow: 0.7vmin 0.7vmin 0.5vmin 0 rgba(0, 0, 0, 0.5)

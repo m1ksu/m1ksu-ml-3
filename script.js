@@ -30,7 +30,6 @@ $(function() {
     });
 
     window.onscroll = function () {
-
         if ($(window).scrollTop() >= ($(".wp1").position().top - 100)) {
             $('.navTable').animate({opacity: 1});
         }
