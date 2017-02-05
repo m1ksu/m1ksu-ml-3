@@ -9,13 +9,15 @@ $secshadow: inset 0px 1vmin 2vmin 0 black, inset 0 -1vmin 2vmin 0 black
 $previewshadow: 0.7vmin 0.7vmin 0.5vmin 0 rgba(0, 0, 0, 0.5)
 $gameshadow: 0px 0.5vmin 0 0px #b9b900, 0.2vmin 0.5vmin 0.5vmin 0.3vmin black
 
+html
+    width: 100vw
+
 html, body
     margin: 0
     font-family: 'Roboto Slab', serif
-    height: 225%
     background-color: $pl4
 
-.wp1, .wp2, .wp3, .wp4
+.wp1, .wp2, .wp3, .wp4, .wp5
     position: relative
 
 .wp1
@@ -26,6 +28,9 @@ html, body
     top: -5%
 .wp4
     top: -5%
+.wp5
+    top: -5%
+
 
 .nav
     position: fixed
@@ -47,13 +52,15 @@ html, body
         margin-left: auto
         margin-right: auto
 
-        width: 90vmin
+        padding: 15vmax
+
+        width: 90%
         height: 7.5vmin
         border-spacing: 0
         th
-            padding: 0
             text-align: center
-            width: 1vmin
+            width: 20px
+            padding: 0
         th:hover
             cursor: pointer
             animation-name: navHover
@@ -108,6 +115,7 @@ html, body
     margin-left: $padding
     font-size: 10vmin
     font-weight: bold
+
 .about
     width: 100%
     height: 100vmin
@@ -122,11 +130,12 @@ html, body
     .bio
         font-size: 3.5vmin
         margin-left: $padding
+        margin-right: 75vmin
 
     .contact
         margin-top: 10vmin
         margin-left: $padding
-        margin-right: 95vmin
+        margin-right: $padding
 
         line-height: 5vmin
 
@@ -151,6 +160,7 @@ html, body
             font-weight: bold
         .email
             margin-top: 4%
+
 .websites
     width: 100%
     height: 120vmin
@@ -209,6 +219,7 @@ html, body
 
     .previews
         margin-left: $padding
+        margin-right: $padding
 
     .gamePreview
         text-decoration: none
@@ -303,12 +314,13 @@ html, body
     box-shadow: $secshadow
     .portfolio
         margin-left: 30vmin
+        margin-right: 30vmin
         margin-top: 3vmin
         width: 100vmin
         line-height: 0px
         .wall
             width: 30vmin
-            display: inline
+            display: inline-block
             color: $pl1
             img
                 width: 30vmin
@@ -324,6 +336,37 @@ html, body
                 animation-duration: 0.1s
                 -webkit-animation-fill-mode: forwards
 
+.music
+    background-color: $pl5
+    color: $pl1
+    height: 150vmin
+
+    .gen
+        display: block
+        img
+            width: 40vmin
+            margin-left: $padding
+            float: left
+        img:hover
+            animation-name: previewHover
+            animation-duration: 0.1s
+            -webkit-animation-fill-mode: forwards
+        img:not(:hover)
+            animation-name: previewHoverOut
+            animation-duration: 0.1s
+            -webkit-animation-fill-mode: forwards
+
+        ul
+            width: 110vmin
+            float: left
+            iframe
+                width: 90%
+                height: 13vmin
+                margin-bottom: 1vmin
+                box-shadow: $previewshadow
+                display: block
+    #second
+        margin-top: 50vmin
 @keyframes previewHover
     from
         box-shadow: $previewshadow
@@ -332,6 +375,7 @@ html, body
         box-shadow: 0.7vmin 0.7vmin 1.5vmin 0.2vmin rgba(0, 0, 0, 0.75)
         transform: scale(1.075, 1.075)
 @keyframes previewHoverOut
+
     from
         filter: brightness(60%)
         transform: scale(1.075, 1.075)
@@ -340,3 +384,128 @@ html, body
         filter: brightness(100%)
         transform: scale(1, 1)
         box-shadow: 0.7vmin 0.7vmin 0.5vmin 0 rgba(0, 0, 0, 0.5)
+
+
+// Global
+@media screen and (max-aspect-ratio: 1/1)
+    *
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+
+    .previews
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+
+    .title
+        padding-top: 5vmin
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+
+    .wp2
+        display: none
+
+// Header
+@media screen and (max-aspect-ratio: 1/1)
+    .header
+        height: 60vmin
+        .title
+            margin-left: auto
+            margin-right: auto
+            padding-top: 0
+            #headerName
+                font-size: 17vmin
+
+// Nav
+@media screen and (max-aspect-ratio: 1/1)
+    .nav
+        display: none
+
+// About
+@media screen and (max-aspect-ratio: 1/1)
+    .about
+        height: 100vmin
+        .title
+            padding-top: 5vmin
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+        .bio
+            margin-left: auto
+            margin-right: auto
+            padding-left: 10%
+            padding-right: 10%
+        .contact
+            width: 75%
+            margin-left: auto
+            margin-right: auto
+
+// Websites
+@media screen and (max-aspect-ratio: 1/1)
+    .websites
+        height: 190vmin
+        .subTitle
+            margin-left: auto
+            margin-right: auto
+
+        .sitePreview
+            .siteTitle
+                margin-left: auto
+                margin-right: auto
+
+        .portfolio
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+            img
+                margin-left: auto
+                margin-right: auto
+                text-align: center
+
+// Games
+@media screen and (max-aspect-ratio: 1/1)
+    .games
+        height: 375vmin
+        .previews
+            margin-left: auto
+            margin-right: auto
+            .gamePreview
+                margin-left: auto
+                margin-right: auto
+                width: 75vmin
+                text-align: center
+                img
+                    width: 75vmin
+                .gameTitle
+                    font-size: 5vmin
+                .gameBio
+                    font-size: 4vmin
+                .gamePlay
+                    margin-left: auto
+                    margin-right: auto
+                    font-size: 5vmin
+                    width: 30vmin
+                    height: 7.5vmin
+                    span
+                        top: 6%
+
+// Wallpapers
+@media screen and (max-aspect-ratio: 1/1)
+    .wallpapers
+        height: 880vmin
+        .portfolio
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+            .wall
+                display: block
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 2vmin
+                width: 100%
+                img
+                    margin-left: auto
+                    margin-right: auto
+                    width: 75vmin

@@ -24,6 +24,12 @@ $(function() {
         }, {duration: 600, easing: 'easeInOutSine'});
     });
 
+    $(document).on('click','#w5', function(){
+        $('html, body').animate({
+            scrollTop: $(".wp5").offset().top,
+        }, {duration: 600, easing: 'easeInOutSine'});
+    });
+
 
     $(document).on('click', 'body', function(){
         $('navTable').animate({opacity: 1});
