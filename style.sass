@@ -16,6 +16,11 @@ html, body
     margin: 0
     font-family: 'Roboto Slab', serif
     background-color: $pl4
+    overflow-x: hidden
+
+*
+    transition: height 0.5s ease-in-out
+
 
 .wp1, .wp2, .wp3, .wp4, .wp5
     position: relative
@@ -130,7 +135,7 @@ html, body
     .bio
         font-size: 3.5vmin
         margin-left: $padding
-        margin-right: 75vmin
+        margin-right: 30%
 
     .contact
         margin-top: 10vmin
@@ -308,7 +313,7 @@ html, body
 
 .wallpapers
     width: 100%
-    height: 150vmin
+    height: 132vmin
     background-color: $pl1
     color: $pl5
     box-shadow: $secshadow
@@ -316,12 +321,13 @@ html, body
         margin-left: 30vmin
         margin-right: 30vmin
         margin-top: 3vmin
-        width: 100vmin
+        width: 80%
         line-height: 0px
         .wall
             width: 30vmin
             display: inline-block
             color: $pl1
+            margin-left: 2.5vmin
             img
                 width: 30vmin
                 border: 0.5vmin solid white
@@ -342,6 +348,7 @@ html, body
     height: 150vmin
 
     .gen
+        margin-top: 5vmin
         display: block
         img
             width: 40vmin
@@ -387,10 +394,9 @@ html, body
 
 
 // Global
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 14/8)
     *
         margin-left: auto
-        margin-right: auto
         text-align: center
 
     .previews
@@ -408,7 +414,7 @@ html, body
         display: none
 
 // Header
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 14/8)
     .header
         height: 60vmin
         .title
@@ -419,12 +425,12 @@ html, body
                 font-size: 17vmin
 
 // Nav
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 12/9)
     .nav
         display: none
 
 // About
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 14/8)
     .about
         height: 100vmin
         .title
@@ -443,29 +449,35 @@ html, body
             margin-right: auto
 
 // Websites
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 14/8)
     .websites
-        height: 190vmin
+        height: 130vh
+        .previews
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+
         .subTitle
             margin-left: auto
             margin-right: auto
 
         .sitePreview
+            margin-left: auto
+            margin-right: auto
             .siteTitle
                 margin-left: auto
                 margin-right: auto
-
-        .portfolio
+@media screen and (min-aspect-ratio: 8/10) and (max-aspect-ratio: 10/8)
+    .websites
+        height: 190vh
+        .previews
             margin-left: auto
             margin-right: auto
-            text-align: center
-            img
-                margin-left: auto
-                margin-right: auto
-                text-align: center
+            .sitePreview
+                display: block
 
 // Games
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 14/8)
     .games
         height: 375vmin
         .previews
@@ -476,6 +488,7 @@ html, body
                 margin-right: auto
                 width: 75vmin
                 text-align: center
+                display: block
                 img
                     width: 75vmin
                 .gameTitle
@@ -492,7 +505,7 @@ html, body
                         top: 6%
 
 // Wallpapers
-@media screen and (max-aspect-ratio: 1/1)
+@media screen and (max-aspect-ratio: 14/8)
     .wallpapers
         height: 880vmin
         .portfolio
@@ -509,3 +522,27 @@ html, body
                     margin-left: auto
                     margin-right: auto
                     width: 75vmin
+
+// Music
+@media screen and (max-aspect-ratio: 14/8)
+    .music
+        height: 220vmin
+        .gen
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 30vmin
+            img
+                margin-bottom: 7vh
+                margin-left: 33%
+                text-align: center
+            ul
+                margin-left: auto
+                margin-right: auto
+                float: none
+                width: 90%
+                height: 400px
+                iframe
+                    margin-left: auto
+                    margin-right: auto
+        #second
+            margin-top: 0
