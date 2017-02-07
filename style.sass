@@ -15,7 +15,7 @@ html
 html, body
     margin: 0
     font-family: 'Roboto Slab', serif
-    background-color: $pl4
+    background-color: $pl5
     overflow-x: hidden
 
 *
@@ -526,29 +526,43 @@ html, body
 // Music
 @media screen and (max-aspect-ratio: 13/8)
     .music
-        height: 220vmin
+        height: 100%
         .gen
             margin-left: auto
             margin-right: auto
+            text-align: center
             margin-bottom: 35vmin
+            height: 100vmin
             img
                 margin-bottom: 7vh
-                margin-left: 33%
                 text-align: center
             ul
                 margin-left: auto
                 margin-right: auto
+                text-align: center
                 float: none
                 width: 90%
                 height: 400px
+                padding: 0
                 iframe
-                    margin-left: auto
-                    margin-right: auto
+                    width: 90%
+                    margin: 0 auto
         #second
             margin-top: 0
-
 @media screen and (max-aspect-ratio: 10/13)
     .music
         height: 240vmin
         .gen
-            margin-bottom: 20vmin
+            margin-bottom: 10vmin
+            height: 40vmin
+@media screen and (max-aspect-ratio: 1/2)
+    .music
+        height: 240vmin
+        .gen
+            margin-bottom: 0
+            height: 100vmin
+
+@media screen and (max-aspect-ratio: 15/20)
+    .music
+        .gen
+            height: 100vmin
